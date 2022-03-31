@@ -88,10 +88,10 @@ function AppBody() {
     const [error, setError] = React.useState('');
     // filters (ALL , ACTIVE , COMPLETED)
     const [activeFilter, setActiveFilter] = React.useState('ALL');
-    const [filteredTodos, setFilteredTodos] = React.useState(todos);
+    // const [filteredTodos, setFilteredTodos] = React.useState(todos);
     const [activeTodosAmount, setActiveTodosAmount] = React.useState();
 
-    // function to set data in local storage --to be cont.
+    // function to set data in local storage
     React.useEffect(
         () => {
             localStorage.setItem('Todos', JSON.stringify(todos));
@@ -109,19 +109,19 @@ function AppBody() {
     }
 
     // filter data
-    React.useEffect(() => {
-        switch (activeFilter) {
-            case 'ACTIVE':
-                setFilteredTodos(todos.filter(todo => todo.isComplete === false));
-                break;
-            case 'COMPLETED':
-                setFilteredTodos(todos.filter(todo => todo.isComplete === true));
-                break;
-            default:
-                // default is "ALL"
-                setFilteredTodos(todos);
-        }
-    }, [activeFilter, todos]);
+    // React.useEffect(() => {
+    //     switch (activeFilter) {
+    //         case 'ACTIVE':
+    //             setFilteredTodos(todos.filter(todo => todo.isComplete === false));
+    //             break;
+    //         case 'COMPLETED':
+    //             setFilteredTodos(todos.filter(todo => todo.isComplete === true));
+    //             break;
+    //         default:
+    //             // default is "ALL"
+    //             setFilteredTodos(todos);
+    //     }
+    // }, [activeFilter, todos]);
 
     // getting active todo 
     React.useEffect(() => {
@@ -145,7 +145,8 @@ function AppBody() {
                 {todos.length > 0 &&
                     <>
                         <TodoList
-                            todos={filteredTodos}
+                            activeFilter={activeFilter}
+                            todos={todos}
                             updateTodos={updatedItems => dispatch({ type: 'ARRAGE_LIST', updatedItems })}
                             completed={id => dispatch({ type: 'TODO_COMPLETED', id })}
                             deleteTodo={id => dispatch({ type: 'DELETE_TODO', id })}
