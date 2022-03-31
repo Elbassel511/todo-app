@@ -1,0 +1,47 @@
+@import "../../assests/styles/variables";
+
+.list {
+  padding: 0;
+  margin-bottom: 0;
+  & .list--item {
+    position: relative;
+    display: flex;
+    padding: $todoItempadding;
+    border-bottom: 1px solid $Light-200;
+    justify-content: space-between;
+    cursor: grab;
+  }
+  & p {
+    font-family: $font-primary;
+    font-size: $fs-sm-200;
+    color: $Light-500;
+
+    &.completed {
+      text-decoration: line-through;
+      color: $Light-400;
+    }
+
+    @media (min-width: $break-point) {
+      font-size: $fs-200;
+    }
+  }
+  & .btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &.dark {
+    & .list--item {
+      border: 1px solid $Dark-500;
+      background-color: $Dark-600;
+      & p {
+        color: $Dark-200;
+        &.completed {
+          text-decoration: line-through;
+          color: $Dark-400;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "../../assests/styles/variables";
+.box {
+  width: 100%;
+  background-color: $Light-100;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0.8px 10px rgba(0, 0, 0, 0.2);
+
+  &.dark {
+    background-color: $Dark-600;
+  }
+}

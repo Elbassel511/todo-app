@@ -1,0 +1,22 @@
+@import "../../../assests/styles/variables";
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  @media (min-width: $break-point) {
+    margin-bottom: 4.5rem;
+  }
+
+  & h1 {
+    font-size: $fs-sm-100;
+    color: $Light-100;
+    font-family: $font-primary;
+    font-weight: 700;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+
+    @media (min-width: $break-point) {
+      font-size: $fs-100;
+    }
+  }
+}

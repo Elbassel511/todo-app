@@ -1,0 +1,47 @@
+// break points
+$break-point: 370px;
+$break-point-m: 600px;
+
+//  ---------  //
+//   colors   //
+//  -------- //
+
+// Primary
+$primary: hsl(220, 98%, 61%);
+$Check-Background: linear-gradient(
+  135deg,
+  hsl(192, 100%, 67%),
+  hsl(280, 87%, 65%)
+);
+
+// light theme
+
+$Light-100: hsl(0, 0%, 98%);
+$Light-200: hsl(236, 33%, 92%);
+$Light-300: hsl(233, 11%, 84%);
+$Light-400: hsl(236, 9%, 61%);
+$Light-500: hsl(235, 19%, 35%);
+
+// Dark Theme
+
+$Dark-100: hsl(236, 33%, 92%);
+$Dark-200: hsl(234, 39%, 85%);
+$Dark-300: hsl(234, 11%, 52%);
+$Dark-400: hsl(233, 14%, 35%);
+$Dark-500: hsl(237, 14%, 26%);
+$Dark-600: hsl(235, 24%, 19%);
+$Dark-700: hsl(235, 21%, 11%);
+
+// typography
+
+$font-primary: "Josefin Sans", sans-serif;
+
+$fs-100: 4rem;
+$fs-200: 1.8rem;
+$fs-300: 1.6rem;
+$fs-sm-100: 2.7rem;
+$fs-sm-200: 1.2rem;
+$fs-sm-300: 1rem;
+
+// custom
+$todoItempadding: 1.7rem 2.5rem 1.7rem 5rem;

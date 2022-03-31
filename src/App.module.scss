@@ -1,0 +1,21 @@
+@import "./assests/styles/variables";
+
+.container {
+  width: min(54rem, 90vw);
+  margin-top: 4rem;
+  padding-block-end: 3rem;
+  z-index: 100;
+  @media (min-width: $break-point) {
+    margin-top: 7rem;
+  }
+}
+.info {
+  text-align: center;
+  color: $Light-400;
+  padding-top: 3rem;
+  font-family: $font-primary;
+  font-size: $fs-sm-300;
+  @media (min-width: $break-point) {
+    font-size: $fs-300;
+  }
+}

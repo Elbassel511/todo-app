@@ -1,0 +1,28 @@
+@import "../../assests/styles/variables";
+
+.form {
+  width: 100%;
+  position: relative;
+  color: $Light-500;
+  &.dark {
+    color: $Dark-100;
+  }
+
+  & input[type="text"] {
+    width: 100%;
+    // height: 6rem;
+    font-family: $font-primary;
+    font-size: $fs-sm-200;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    padding: $todoItempadding;
+
+    &::placeholder {
+      font-family: inherit;
+    }
+    @media (min-width: $break-point) {
+      font-size: $fs-200;
+    }
+  }
+}

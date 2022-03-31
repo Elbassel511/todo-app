@@ -1,0 +1,20 @@
+@import "../../assests/styles/variables";
+
+.btn {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  @media (min-width: $break-point) {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
