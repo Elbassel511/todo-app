@@ -2,7 +2,7 @@ import React from 'react';
 import CheckBox from './CheckBox';
 import classes from './TodoList.module.scss';
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import arrayMove from 'array-move';
+import { immutableArrayMove } from 'array-move';
 import { theme } from '../../themes/ThemeProvider';
 
 
@@ -64,7 +64,7 @@ function TodoList(props) {
         if (!result.destination) return;
         const sourceIndex = result.source.index;
         const destinationIndex = result.destination.index;
-        const updatedItems = arrayMove(todos, sourceIndex, destinationIndex);
+        const updatedItems = immutableArrayMove(todos, sourceIndex, destinationIndex);
         // sending updated todos to app body
         props.updateTodos(updatedItems);
     }
